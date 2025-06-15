@@ -1,0 +1,9 @@
+### Generate Order History PDF
+POST http://localhost:8080/api/orders/report
+Content-Type: application/json
+
+{
+  "customerId": "CUST001",
+  "fromDate": "2023-01-01",
+  "toDate": "2023-12-31"
+}
