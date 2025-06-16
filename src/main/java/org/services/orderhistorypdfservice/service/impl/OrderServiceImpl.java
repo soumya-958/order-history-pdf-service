@@ -28,7 +28,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public byte[] generateOrderReport(OrderRequestDto requestDto) {
-        logger.debug("Fetching orders for customerId={}, from={}, to={}",
+        logger.info("Fetching orders for customerId={}, from={}, to={}",
                 requestDto.getCustomerId(), requestDto.getFromDate(), requestDto.getToDate());
 
         List<Order> orders = orderRepository.findByCustomerIdAndOrderDateBetween(

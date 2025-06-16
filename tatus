@@ -1,0 +1,8 @@
+user.name=Palepu Pranavi
+user.email=Palepu_Pranavi@swissre.com
+push.default=simple
+pull.rebase=false
+http.sslbackend=schannel
+credential.https://dev.azure.com.usehttppath=true
+credential.https://azrepos.provider=generic
+credential.azreposcredentialtype=oauth
