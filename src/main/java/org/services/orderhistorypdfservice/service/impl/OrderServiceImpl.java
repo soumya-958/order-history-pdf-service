@@ -31,6 +31,11 @@ public class OrderServiceImpl implements OrderService {
         logger.info("Fetching orders for customerId={}, from={}, to={}",
                 requestDto.getCustomerId(), requestDto.getFromDate(), requestDto.getToDate());
 
+        // 🔐 Add date validation before querying the database
+        if (requestDto.getFromDate().isAfter(requestDto.getToDate())) {
+            throw new IllegalArgumentException("From date cannot be after To date");
+        }
+
         List<Order> orders = orderRepository.findByCustomerIdAndOrderDateBetween(
                 requestDto.getCustomerId(),
                 requestDto.getFromDate(),
@@ -41,7 +46,6 @@ public class OrderServiceImpl implements OrderService {
             throw new ResourceNotFoundException("No orders found for given customer and date range.");
         }
 
-        // Use stream to filter/map/log if needed
         List<Order> sortedOrders = orders.stream()
                 .sorted((a, b) -> a.getOrderDate().compareTo(b.getOrderDate()))
                 .collect(Collectors.toList());

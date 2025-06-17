@@ -1,741 +1,132 @@
-2025-06-16T09:58:46.198+05:30  INFO 23888 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Starting OrderHistoryPdfServiceApplication using Java 21.0.2 with PID 23888 (C:\srdev\projects\order-history-pdf\order-history-pdf-service\target\classes started by S6X8SF in C:\srdev\projects\order-history-pdf\order-history-pdf-service)
-2025-06-16T09:58:46.199+05:30 DEBUG 23888 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Running with Spring Boot v3.2.5, Spring v6.1.6
-2025-06-16T09:58:46.200+05:30  INFO 23888 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2025-06-16T09:58:46.247+05:30  INFO 23888 --- [order-history-pdf-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-06-16T09:58:46.248+05:30  INFO 23888 --- [order-history-pdf-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-06-16T09:58:46.730+05:30  INFO 23888 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-16T09:58:46.780+05:30  INFO 23888 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 1 JPA repository interface.
-2025-06-16T09:58:47.207+05:30  INFO 23888 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-06-16T09:58:47.218+05:30  INFO 23888 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-16T09:58:47.219+05:30  INFO 23888 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
-2025-06-16T09:58:47.262+05:30  INFO 23888 --- [order-history-pdf-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-16T09:58:47.262+05:30  INFO 23888 --- [order-history-pdf-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1014 ms
-2025-06-16T09:58:47.373+05:30  INFO 23888 --- [order-history-pdf-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-16T09:58:47.416+05:30  INFO 23888 --- [order-history-pdf-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2025-06-16T09:58:47.442+05:30  INFO 23888 --- [order-history-pdf-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-16T09:58:47.615+05:30  INFO 23888 --- [order-history-pdf-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-16T09:58:47.635+05:30  INFO 23888 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-16T09:58:47.774+05:30  INFO 23888 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@767a0484
-2025-06-16T09:58:47.775+05:30  INFO 23888 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-16T09:58:47.807+05:30  WARN 23888 --- [order-history-pdf-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-06-16T09:58:48.512+05:30  INFO 23888 --- [order-history-pdf-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-16T09:58:48.515+05:30  INFO 23888 --- [order-history-pdf-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T09:58:48.783+05:30  WARN 23888 --- [order-history-pdf-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-16T09:58:49.014+05:30  INFO 23888 --- [order-history-pdf-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-06-16T09:58:49.042+05:30  INFO 23888 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2025-06-16T09:58:49.048+05:30  INFO 23888 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Started OrderHistoryPdfServiceApplication in 3.228 seconds (process running for 3.819)
-2025-06-16T09:58:59.747+05:30  INFO 23888 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-16T09:58:59.748+05:30  INFO 23888 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-06-16T09:58:59.748+05:30  INFO 23888 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2025-06-16T09:58:59.859+05:30  INFO 23888 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.o.controller.OrderReportController   : Received report generation request for customerId=CUST001, from=2023-01-01, to=2023-12-31
-2025-06-16T09:58:59.859+05:30  INFO 23888 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.o.service.impl.OrderServiceImpl      : Fetching orders for customerId=CUST001, from=2023-01-01, to=2023-12-31
-2025-06-16T09:58:59.964+05:30  INFO 23888 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.o.service.impl.OrderServiceImpl      : Found 10 orders. Generating PDF report...
-2025-06-16T09:59:00.123+05:30  INFO 23888 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.o.util.PdfGeneratorUtil              : PDF report generated successfully.
-2025-06-16T09:59:23.335+05:30  INFO 23888 --- [order-history-pdf-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T09:59:23.337+05:30  INFO 23888 --- [order-history-pdf-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-06-16T09:59:23.339+05:30  INFO 23888 --- [order-history-pdf-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-06-16T10:26:15.075+05:30  INFO 8924 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Starting OrderHistoryPdfServiceApplication using Java 21.0.2 with PID 8924 (C:\srdev\projects\order-history-pdf\order-history-pdf-service\target\classes started by S6X8SF in C:\srdev\projects\order-history-pdf\order-history-pdf-service)
-2025-06-16T10:26:15.077+05:30 DEBUG 8924 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Running with Spring Boot v3.2.5, Spring v6.1.6
-2025-06-16T10:26:15.077+05:30  INFO 8924 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2025-06-16T10:26:15.118+05:30  INFO 8924 --- [order-history-pdf-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-06-16T10:26:15.119+05:30  INFO 8924 --- [order-history-pdf-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-06-16T10:26:15.677+05:30  INFO 8924 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-16T10:26:15.723+05:30  INFO 8924 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 1 JPA repository interface.
-2025-06-16T10:26:16.159+05:30  INFO 8924 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-06-16T10:26:16.168+05:30  INFO 8924 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-16T10:26:16.169+05:30  INFO 8924 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
-2025-06-16T10:26:16.207+05:30  INFO 8924 --- [order-history-pdf-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-16T10:26:16.207+05:30  INFO 8924 --- [order-history-pdf-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1088 ms
-2025-06-16T10:26:16.306+05:30  INFO 8924 --- [order-history-pdf-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-16T10:26:16.349+05:30  INFO 8924 --- [order-history-pdf-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2025-06-16T10:26:16.376+05:30  INFO 8924 --- [order-history-pdf-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-16T10:26:16.560+05:30  INFO 8924 --- [order-history-pdf-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-16T10:26:16.580+05:30  INFO 8924 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-16T10:26:16.728+05:30  INFO 8924 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@469d1995
-2025-06-16T10:26:16.729+05:30  INFO 8924 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-16T10:26:16.762+05:30  WARN 8924 --- [order-history-pdf-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-06-16T10:26:17.405+05:30  INFO 8924 --- [order-history-pdf-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-16T10:26:17.408+05:30  INFO 8924 --- [order-history-pdf-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T10:26:17.690+05:30  WARN 8924 --- [order-history-pdf-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-16T10:26:17.948+05:30  INFO 8924 --- [order-history-pdf-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-06-16T10:26:17.979+05:30  INFO 8924 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2025-06-16T10:26:17.986+05:30  INFO 8924 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Started OrderHistoryPdfServiceApplication in 3.256 seconds (process running for 3.914)
-2025-06-16T10:26:29.005+05:30  INFO 8924 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-16T10:26:29.005+05:30  INFO 8924 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-06-16T10:26:29.007+05:30  INFO 8924 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-06-16T10:26:29.115+05:30  INFO 8924 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.o.controller.OrderReportController   : Received report generation request for customerId=CUST001, from=2023-01-01, to=2023-05-31
-2025-06-16T10:26:29.115+05:30  INFO 8924 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.o.service.impl.OrderServiceImpl      : Fetching orders for customerId=CUST001, from=2023-01-01, to=2023-05-31
-2025-06-16T10:26:29.223+05:30  INFO 8924 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.o.service.impl.OrderServiceImpl      : Found 5 orders. Generating PDF report...
-2025-06-16T10:26:29.369+05:30  INFO 8924 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.o.util.PdfGeneratorUtil              : PDF report generated successfully.
-2025-06-16T10:26:59.499+05:30  INFO 8924 --- [order-history-pdf-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T10:26:59.502+05:30  INFO 8924 --- [order-history-pdf-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-06-16T10:26:59.509+05:30  INFO 8924 --- [order-history-pdf-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-06-16T11:27:52.679+05:30  INFO 18172 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Starting OrderHistoryPdfServiceApplication using Java 21.0.2 with PID 18172 (C:\srdev\projects\order-history-pdf\order-history-pdf-service\target\classes started by S6X8SF in C:\srdev\projects\order-history-pdf\order-history-pdf-service)
-2025-06-16T11:27:52.685+05:30 DEBUG 18172 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Running with Spring Boot v3.2.5, Spring v6.1.6
-2025-06-16T11:27:52.687+05:30  INFO 18172 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2025-06-16T11:27:52.734+05:30  INFO 18172 --- [order-history-pdf-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-06-16T11:27:52.735+05:30  INFO 18172 --- [order-history-pdf-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-06-16T11:27:53.255+05:30  INFO 18172 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-16T11:27:53.305+05:30  INFO 18172 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interface.
-2025-06-16T11:27:53.704+05:30  INFO 18172 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-06-16T11:27:53.713+05:30  INFO 18172 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-16T11:27:53.713+05:30  INFO 18172 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
-2025-06-16T11:27:53.757+05:30  INFO 18172 --- [order-history-pdf-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-16T11:27:53.757+05:30  INFO 18172 --- [order-history-pdf-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1022 ms
-2025-06-16T11:27:53.861+05:30  INFO 18172 --- [order-history-pdf-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-16T11:27:53.901+05:30  INFO 18172 --- [order-history-pdf-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2025-06-16T11:27:53.928+05:30  INFO 18172 --- [order-history-pdf-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-16T11:27:54.104+05:30  INFO 18172 --- [order-history-pdf-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-16T11:27:54.127+05:30  INFO 18172 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-16T11:27:54.288+05:30  INFO 18172 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@55f33065
-2025-06-16T11:27:54.289+05:30  INFO 18172 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-16T11:27:54.324+05:30  WARN 18172 --- [order-history-pdf-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-06-16T11:27:55.179+05:30  INFO 18172 --- [order-history-pdf-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-16T11:27:55.183+05:30  INFO 18172 --- [order-history-pdf-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T11:27:55.453+05:30  WARN 18172 --- [order-history-pdf-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-16T11:27:55.765+05:30  INFO 18172 --- [order-history-pdf-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-06-16T11:27:55.805+05:30  INFO 18172 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2025-06-16T11:27:55.812+05:30  INFO 18172 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Started OrderHistoryPdfServiceApplication in 3.498 seconds (process running for 4.145)
-2025-06-16T11:42:23.327+05:30  INFO 18172 --- [order-history-pdf-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T11:42:23.330+05:30  INFO 18172 --- [order-history-pdf-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-06-16T11:42:23.333+05:30  INFO 18172 --- [order-history-pdf-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-06-16T11:42:25.825+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Starting OrderHistoryPdfServiceApplication using Java 21.0.2 with PID 33768 (C:\srdev\projects\order-history-pdf\order-history-pdf-service\target\classes started by S6X8SF in C:\srdev\projects\order-history-pdf\order-history-pdf-service)
-2025-06-16T11:42:25.826+05:30 DEBUG 33768 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Running with Spring Boot v3.2.5, Spring v6.1.6
-2025-06-16T11:42:25.828+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2025-06-16T11:42:25.874+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-06-16T11:42:25.875+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-06-16T11:42:26.417+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-16T11:42:26.469+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interface.
-2025-06-16T11:42:26.891+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-06-16T11:42:26.901+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-16T11:42:26.901+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
-2025-06-16T11:42:26.951+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-16T11:42:26.951+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1076 ms
-2025-06-16T11:42:27.095+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-16T11:42:27.149+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2025-06-16T11:42:27.177+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-16T11:42:27.356+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-16T11:42:27.381+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-16T11:42:27.524+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4aa891ec
-2025-06-16T11:42:27.525+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-16T11:42:27.556+05:30  WARN 33768 --- [order-history-pdf-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-06-16T11:42:28.248+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-16T11:42:28.251+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T11:42:28.583+05:30  WARN 33768 --- [order-history-pdf-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-16T11:42:28.879+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-06-16T11:42:28.931+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2025-06-16T11:42:28.939+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Started OrderHistoryPdfServiceApplication in 3.478 seconds (process running for 4.399)
-2025-06-16T11:49:43.042+05:30  INFO 33768 --- [order-history-pdf-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
-2025-06-16T11:49:43.055+05:30  INFO 33768 --- [order-history-pdf-service] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T11:49:43.059+05:30  INFO 33768 --- [order-history-pdf-service] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-06-16T11:49:43.063+05:30  INFO 33768 --- [order-history-pdf-service] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-06-16T11:49:43.196+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Starting OrderHistoryPdfServiceApplication using Java 21.0.2 with PID 33768 (C:\srdev\projects\order-history-pdf\order-history-pdf-service\target\classes started by S6X8SF in C:\srdev\projects\order-history-pdf\order-history-pdf-service)
-2025-06-16T11:49:43.196+05:30 DEBUG 33768 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Running with Spring Boot v3.2.5, Spring v6.1.6
-2025-06-16T11:49:43.197+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2025-06-16T11:49:43.363+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-16T11:49:43.375+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interface.
-2025-06-16T11:49:43.487+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-06-16T11:49:43.488+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-16T11:49:43.488+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
-2025-06-16T11:49:43.511+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-16T11:49:43.512+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 312 ms
-2025-06-16T11:49:43.541+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-16T11:49:43.543+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-16T11:49:43.548+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-16T11:49:43.549+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2025-06-16T11:49:43.729+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@36b47efb
-2025-06-16T11:49:43.729+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2025-06-16T11:49:43.748+05:30  WARN 33768 --- [order-history-pdf-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-06-16T11:49:43.794+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-16T11:49:43.795+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T11:49:43.884+05:30  WARN 33768 --- [order-history-pdf-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-16T11:49:44.068+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-06-16T11:49:44.082+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2025-06-16T11:49:44.087+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Started OrderHistoryPdfServiceApplication in 0.932 seconds (process running for 439.546)
-2025-06-16T11:49:44.089+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2025-06-16T11:49:45.519+05:30  INFO 33768 --- [order-history-pdf-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
-2025-06-16T11:49:45.525+05:30  INFO 33768 --- [order-history-pdf-service] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T11:49:45.525+05:30  INFO 33768 --- [order-history-pdf-service] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2025-06-16T11:49:45.527+05:30  INFO 33768 --- [order-history-pdf-service] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2025-06-16T11:49:45.624+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Starting OrderHistoryPdfServiceApplication using Java 21.0.2 with PID 33768 (C:\srdev\projects\order-history-pdf\order-history-pdf-service\target\classes started by S6X8SF in C:\srdev\projects\order-history-pdf\order-history-pdf-service)
-2025-06-16T11:49:45.625+05:30 DEBUG 33768 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Running with Spring Boot v3.2.5, Spring v6.1.6
-2025-06-16T11:49:45.625+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2025-06-16T11:49:45.750+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-16T11:49:45.757+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 1 JPA repository interface.
-2025-06-16T11:49:45.820+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-06-16T11:49:45.821+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-16T11:49:45.821+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
-2025-06-16T11:49:45.839+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-16T11:49:45.839+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 212 ms
-2025-06-16T11:49:45.861+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-16T11:49:45.863+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-16T11:49:45.866+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-16T11:49:45.867+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2025-06-16T11:49:45.923+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@183a44ec
-2025-06-16T11:49:45.923+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2025-06-16T11:49:45.934+05:30  WARN 33768 --- [order-history-pdf-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-06-16T11:49:45.962+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-16T11:49:45.963+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T11:49:46.003+05:30  WARN 33768 --- [order-history-pdf-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-16T11:49:46.095+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-06-16T11:49:46.113+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2025-06-16T11:49:46.117+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Started OrderHistoryPdfServiceApplication in 0.516 seconds (process running for 441.576)
-2025-06-16T11:49:46.118+05:30  INFO 33768 --- [order-history-pdf-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2025-06-16T11:49:57.438+05:30  INFO 33768 --- [order-history-pdf-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T11:49:57.439+05:30  INFO 33768 --- [order-history-pdf-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2025-06-16T11:49:57.441+05:30  INFO 33768 --- [order-history-pdf-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2025-06-16T11:49:59.688+05:30  INFO 32268 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Starting OrderHistoryPdfServiceApplication using Java 21.0.2 with PID 32268 (C:\srdev\projects\order-history-pdf\order-history-pdf-service\target\classes started by S6X8SF in C:\srdev\projects\order-history-pdf\order-history-pdf-service)
-2025-06-16T11:49:59.689+05:30 DEBUG 32268 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Running with Spring Boot v3.2.5, Spring v6.1.6
-2025-06-16T11:49:59.690+05:30  INFO 32268 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2025-06-16T11:49:59.728+05:30  INFO 32268 --- [order-history-pdf-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-06-16T11:49:59.729+05:30  INFO 32268 --- [order-history-pdf-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-06-16T11:50:00.247+05:30  INFO 32268 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-16T11:50:00.289+05:30  INFO 32268 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interface.
-2025-06-16T11:50:00.693+05:30  INFO 32268 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-06-16T11:50:00.703+05:30  INFO 32268 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-16T11:50:00.703+05:30  INFO 32268 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
-2025-06-16T11:50:00.746+05:30  INFO 32268 --- [order-history-pdf-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-16T11:50:00.746+05:30  INFO 32268 --- [order-history-pdf-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1017 ms
-2025-06-16T11:50:00.855+05:30  INFO 32268 --- [order-history-pdf-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-16T11:50:00.897+05:30  INFO 32268 --- [order-history-pdf-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2025-06-16T11:50:00.924+05:30  INFO 32268 --- [order-history-pdf-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-16T11:50:01.098+05:30  INFO 32268 --- [order-history-pdf-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-16T11:50:01.121+05:30  INFO 32268 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-16T11:50:01.266+05:30  INFO 32268 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@331793ba
-2025-06-16T11:50:01.269+05:30  INFO 32268 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-16T11:50:01.301+05:30  WARN 32268 --- [order-history-pdf-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-06-16T11:50:02.061+05:30  INFO 32268 --- [order-history-pdf-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-16T11:50:02.065+05:30  INFO 32268 --- [order-history-pdf-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T11:50:02.373+05:30  WARN 32268 --- [order-history-pdf-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-16T11:50:02.665+05:30  INFO 32268 --- [order-history-pdf-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-06-16T11:50:02.700+05:30  INFO 32268 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2025-06-16T11:50:02.706+05:30  INFO 32268 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Started OrderHistoryPdfServiceApplication in 3.417 seconds (process running for 4.118)
-2025-06-16T12:03:12.189+05:30  INFO 32268 --- [order-history-pdf-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T12:03:12.191+05:30  INFO 32268 --- [order-history-pdf-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-06-16T12:03:12.194+05:30  INFO 32268 --- [order-history-pdf-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-06-16T12:03:14.519+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Starting OrderHistoryPdfServiceApplication using Java 21.0.2 with PID 20164 (C:\srdev\projects\order-history-pdf\order-history-pdf-service\target\classes started by S6X8SF in C:\srdev\projects\order-history-pdf\order-history-pdf-service)
-2025-06-16T12:03:14.521+05:30 DEBUG 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Running with Spring Boot v3.2.5, Spring v6.1.6
-2025-06-16T12:03:14.522+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2025-06-16T12:03:14.568+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-06-16T12:03:14.569+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-06-16T12:03:15.139+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-16T12:03:15.182+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interface.
-2025-06-16T12:03:15.571+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-06-16T12:03:15.579+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-16T12:03:15.580+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
-2025-06-16T12:03:15.629+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-16T12:03:15.630+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1060 ms
-2025-06-16T12:03:15.784+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-16T12:03:15.851+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2025-06-16T12:03:15.893+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-16T12:03:16.080+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-16T12:03:16.101+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-16T12:03:16.276+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1b7ce555
-2025-06-16T12:03:16.277+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-16T12:03:16.316+05:30  WARN 20164 --- [order-history-pdf-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-06-16T12:03:17.074+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-16T12:03:17.077+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T12:03:17.341+05:30  WARN 20164 --- [order-history-pdf-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-16T12:03:17.615+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-06-16T12:03:17.651+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2025-06-16T12:03:17.657+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Started OrderHistoryPdfServiceApplication in 3.531 seconds (process running for 4.319)
-2025-06-16T12:06:09.361+05:30  INFO 25468 --- [order-history-pdf-service] [main] o.s.o.c.OrderReportControllerTest        : Starting OrderReportControllerTest using Java 21.0.2 with PID 25468 (started by S6X8SF in C:\srdev\projects\order-history-pdf\order-history-pdf-service)
-2025-06-16T12:06:09.364+05:30 DEBUG 25468 --- [order-history-pdf-service] [main] o.s.o.c.OrderReportControllerTest        : Running with Spring Boot v3.2.5, Spring v6.1.6
-2025-06-16T12:06:09.364+05:30  INFO 25468 --- [order-history-pdf-service] [main] o.s.o.c.OrderReportControllerTest        : No active profile set, falling back to 1 default profile: "default"
-2025-06-16T12:06:11.419+05:30  INFO 25468 --- [order-history-pdf-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-06-16T12:06:11.420+05:30  INFO 25468 --- [order-history-pdf-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-06-16T12:06:11.421+05:30  INFO 25468 --- [order-history-pdf-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2025-06-16T12:06:11.446+05:30  INFO 25468 --- [order-history-pdf-service] [main] o.s.o.c.OrderReportControllerTest        : Started OrderReportControllerTest in 2.478 seconds (process running for 3.746)
-2025-06-16T12:06:11.688+05:30  INFO 25468 --- [order-history-pdf-service] [main] o.s.o.controller.OrderReportController   : Received report generation request for customerId=CUST001, from=2023-01-01, to=2023-12-31
-2025-06-16T12:06:54.523+05:30  INFO 20164 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-16T12:06:54.524+05:30  INFO 20164 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-06-16T12:06:54.525+05:30  INFO 20164 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-06-16T12:06:54.633+05:30  INFO 20164 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.o.controller.OrderReportController   : Received report generation request for customerId=CUST001, from=2023-01-01, to=2023-05-31
-2025-06-16T12:06:54.633+05:30  INFO 20164 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.o.service.impl.OrderServiceImpl      : Fetching orders for customerId=CUST001, from=2023-01-01, to=2023-05-31
-2025-06-16T12:06:54.728+05:30  INFO 20164 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.o.service.impl.OrderServiceImpl      : Found 5 orders. Generating PDF report...
-2025-06-16T12:06:54.880+05:30  INFO 20164 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.o.util.PdfGeneratorUtil              : PDF report generated successfully.
-2025-06-16T12:07:01.973+05:30  INFO 20164 --- [order-history-pdf-service] [http-nio-8080-exec-3] o.s.o.controller.OrderReportController   : Received report generation request for customerId=CUST001, from=2023-01-01, to=2023-05-31
-2025-06-16T12:07:01.973+05:30  INFO 20164 --- [order-history-pdf-service] [http-nio-8080-exec-3] o.s.o.service.impl.OrderServiceImpl      : Fetching orders for customerId=CUST001, from=2023-01-01, to=2023-05-31
-2025-06-16T12:07:01.976+05:30  INFO 20164 --- [order-history-pdf-service] [http-nio-8080-exec-3] o.s.o.service.impl.OrderServiceImpl      : Found 5 orders. Generating PDF report...
-2025-06-16T12:07:01.981+05:30  INFO 20164 --- [order-history-pdf-service] [http-nio-8080-exec-3] o.s.o.util.PdfGeneratorUtil              : PDF report generated successfully.
-2025-06-16T12:07:09.727+05:30  INFO 20164 --- [order-history-pdf-service] [http-nio-8080-exec-2] o.s.o.controller.OrderReportController   : Received report generation request for customerId=CUST001, from=2023-01-01, to=2023-05-31
-2025-06-16T12:07:09.727+05:30  INFO 20164 --- [order-history-pdf-service] [http-nio-8080-exec-2] o.s.o.service.impl.OrderServiceImpl      : Fetching orders for customerId=CUST001, from=2023-01-01, to=2023-05-31
-2025-06-16T12:07:09.731+05:30  INFO 20164 --- [order-history-pdf-service] [http-nio-8080-exec-2] o.s.o.service.impl.OrderServiceImpl      : Found 5 orders. Generating PDF report...
-2025-06-16T12:07:09.736+05:30  INFO 20164 --- [order-history-pdf-service] [http-nio-8080-exec-2] o.s.o.util.PdfGeneratorUtil              : PDF report generated successfully.
-2025-06-16T12:08:32.549+05:30  INFO 20164 --- [order-history-pdf-service] [http-nio-8080-exec-7] o.s.o.controller.OrderReportController   : Received report generation request for customerId=CUST001, from=2023-01-01, to=2023-05-31
-2025-06-16T12:08:32.549+05:30  INFO 20164 --- [order-history-pdf-service] [http-nio-8080-exec-7] o.s.o.service.impl.OrderServiceImpl      : Fetching orders for customerId=CUST001, from=2023-01-01, to=2023-05-31
-2025-06-16T12:08:32.553+05:30  INFO 20164 --- [order-history-pdf-service] [http-nio-8080-exec-7] o.s.o.service.impl.OrderServiceImpl      : Found 5 orders. Generating PDF report...
-2025-06-16T12:08:32.556+05:30  INFO 20164 --- [order-history-pdf-service] [http-nio-8080-exec-7] o.s.o.util.PdfGeneratorUtil              : PDF report generated successfully.
-2025-06-16T12:08:33.585+05:30  INFO 20164 --- [order-history-pdf-service] [http-nio-8080-exec-8] o.s.o.controller.OrderReportController   : Received report generation request for customerId=CUST001, from=2023-01-01, to=2023-05-31
-2025-06-16T12:08:33.586+05:30  INFO 20164 --- [order-history-pdf-service] [http-nio-8080-exec-8] o.s.o.service.impl.OrderServiceImpl      : Fetching orders for customerId=CUST001, from=2023-01-01, to=2023-05-31
-2025-06-16T12:08:33.591+05:30  INFO 20164 --- [order-history-pdf-service] [http-nio-8080-exec-8] o.s.o.service.impl.OrderServiceImpl      : Found 5 orders. Generating PDF report...
-2025-06-16T12:08:33.594+05:30  INFO 20164 --- [order-history-pdf-service] [http-nio-8080-exec-8] o.s.o.util.PdfGeneratorUtil              : PDF report generated successfully.
-2025-06-16T12:09:35.801+05:30  INFO 6020 --- [order-history-pdf-service] [main] o.OrderHistoryPdfServiceApplicationTests : Starting OrderHistoryPdfServiceApplicationTests using Java 21.0.2 with PID 6020 (started by S6X8SF in C:\srdev\projects\order-history-pdf\order-history-pdf-service)
-2025-06-16T12:09:35.802+05:30 DEBUG 6020 --- [order-history-pdf-service] [main] o.OrderHistoryPdfServiceApplicationTests : Running with Spring Boot v3.2.5, Spring v6.1.6
-2025-06-16T12:09:35.803+05:30  INFO 6020 --- [order-history-pdf-service] [main] o.OrderHistoryPdfServiceApplicationTests : No active profile set, falling back to 1 default profile: "default"
-2025-06-16T12:09:36.497+05:30  INFO 6020 --- [order-history-pdf-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-16T12:09:36.566+05:30  INFO 6020 --- [order-history-pdf-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interface.
-2025-06-16T12:09:37.123+05:30  INFO 6020 --- [order-history-pdf-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-16T12:09:37.197+05:30  INFO 6020 --- [order-history-pdf-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2025-06-16T12:09:37.237+05:30  INFO 6020 --- [order-history-pdf-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-16T12:09:37.480+05:30  INFO 6020 --- [order-history-pdf-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-16T12:09:37.519+05:30  INFO 6020 --- [order-history-pdf-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-16T12:09:37.764+05:30  INFO 6020 --- [order-history-pdf-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6c9a3661
-2025-06-16T12:09:37.766+05:30  INFO 6020 --- [order-history-pdf-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-16T12:09:37.798+05:30  WARN 6020 --- [order-history-pdf-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-06-16T12:09:38.685+05:30  INFO 6020 --- [order-history-pdf-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-16T12:09:38.688+05:30  INFO 6020 --- [order-history-pdf-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T12:09:39.212+05:30  WARN 6020 --- [order-history-pdf-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-16T12:09:39.820+05:30  INFO 6020 --- [order-history-pdf-service] [main] o.OrderHistoryPdfServiceApplicationTests : Started OrderHistoryPdfServiceApplicationTests in 4.347 seconds (process running for 5.619)
-2025-06-16T12:09:40.640+05:30  INFO 6020 --- [order-history-pdf-service] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.services.orderhistorypdfservice.controller.OrderReportControllerTest]: OrderReportControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-06-16T12:09:40.672+05:30  INFO 6020 --- [order-history-pdf-service] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.services.orderhistorypdfservice.OrderHistoryPdfServiceApplication for test class org.services.orderhistorypdfservice.controller.OrderReportControllerTest
-2025-06-16T12:09:40.676+05:30  INFO 6020 --- [order-history-pdf-service] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
-2025-06-16T12:09:40.705+05:30  INFO 6020 --- [order-history-pdf-service] [main] o.s.o.c.OrderReportControllerTest        : Starting OrderReportControllerTest using Java 21.0.2 with PID 6020 (started by S6X8SF in C:\srdev\projects\order-history-pdf\order-history-pdf-service)
-2025-06-16T12:09:40.705+05:30 DEBUG 6020 --- [order-history-pdf-service] [main] o.s.o.c.OrderReportControllerTest        : Running with Spring Boot v3.2.5, Spring v6.1.6
-2025-06-16T12:09:40.706+05:30  INFO 6020 --- [order-history-pdf-service] [main] o.s.o.c.OrderReportControllerTest        : No active profile set, falling back to 1 default profile: "default"
-2025-06-16T12:09:40.992+05:30  INFO 6020 --- [order-history-pdf-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-06-16T12:09:40.992+05:30  INFO 6020 --- [order-history-pdf-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-06-16T12:09:40.993+05:30  INFO 6020 --- [order-history-pdf-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2025-06-16T12:09:40.999+05:30  INFO 6020 --- [order-history-pdf-service] [main] o.s.o.c.OrderReportControllerTest        : Started OrderReportControllerTest in 0.324 seconds (process running for 6.797)
-2025-06-16T12:09:41.145+05:30  INFO 6020 --- [order-history-pdf-service] [main] o.s.o.controller.OrderReportController   : Received report generation request for customerId=CUST001, from=2023-01-01, to=2023-12-31
-2025-06-16T12:09:41.166+05:30  WARN 6020 --- [order-history-pdf-service] [main] o.s.o.exception.GlobalExceptionHandler   : Resource not found: No orders found
-2025-06-16T12:09:41.172+05:30 ERROR 6020 --- [order-history-pdf-service] [main] o.s.o.exception.GlobalExceptionHandler   : Internal server error: 
-
-java.lang.Exception: Something went wrong
-	at org.services.orderhistorypdfservice.exception.GlobalExceptionHandlerTest.handleGenericException_returnsInternalError(GlobalExceptionHandlerTest.java:32) ~[test-classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728) ~[junit-platform-commons-1.10.2.jar:1.10.2]
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57) ~[junit5-rt.jar:na]
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
-	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231) ~[junit-rt.jar:na]
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55) ~[junit-rt.jar:na]
-
-2025-06-16T12:09:41.367+05:30  INFO 6020 --- [order-history-pdf-service] [main] o.s.o.service.impl.OrderServiceImpl      : Fetching orders for customerId=CUST002, from=2023-01-01, to=2023-12-31
-2025-06-16T12:09:41.395+05:30  INFO 6020 --- [order-history-pdf-service] [main] o.s.o.service.impl.OrderServiceImpl      : Fetching orders for customerId=CUST001, from=2023-01-01, to=2023-12-31
-2025-06-16T12:09:41.396+05:30  INFO 6020 --- [order-history-pdf-service] [main] o.s.o.service.impl.OrderServiceImpl      : Found 1 orders. Generating PDF report...
-2025-06-16T12:09:41.413+05:30  INFO 6020 --- [order-history-pdf-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T12:09:41.415+05:30  INFO 6020 --- [order-history-pdf-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-06-16T12:09:41.420+05:30  INFO 6020 --- [order-history-pdf-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-06-16T12:23:21.718+05:30  INFO 20164 --- [order-history-pdf-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
-2025-06-16T12:23:21.727+05:30  INFO 20164 --- [order-history-pdf-service] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T12:23:21.730+05:30  INFO 20164 --- [order-history-pdf-service] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-06-16T12:23:21.733+05:30  INFO 20164 --- [order-history-pdf-service] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-06-16T12:23:21.847+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Starting OrderHistoryPdfServiceApplication using Java 21.0.2 with PID 20164 (C:\srdev\projects\order-history-pdf\order-history-pdf-service\target\classes started by S6X8SF in C:\srdev\projects\order-history-pdf\order-history-pdf-service)
-2025-06-16T12:23:21.847+05:30 DEBUG 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Running with Spring Boot v3.2.5, Spring v6.1.6
-2025-06-16T12:23:21.847+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2025-06-16T12:23:22.021+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-16T12:23:22.034+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interface.
-2025-06-16T12:23:22.216+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-06-16T12:23:22.218+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-16T12:23:22.218+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
-2025-06-16T12:23:22.245+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-16T12:23:22.246+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 394 ms
-2025-06-16T12:23:22.278+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-16T12:23:22.280+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-16T12:23:22.284+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-16T12:23:22.285+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2025-06-16T12:23:22.350+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@15d46a71
-2025-06-16T12:23:22.350+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2025-06-16T12:23:22.369+05:30  WARN 20164 --- [order-history-pdf-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-06-16T12:23:22.407+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-16T12:23:22.407+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T12:23:22.466+05:30  WARN 20164 --- [order-history-pdf-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-16T12:23:22.561+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-06-16T12:23:22.571+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2025-06-16T12:23:22.574+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Started OrderHistoryPdfServiceApplication in 0.758 seconds (process running for 1209.267)
-2025-06-16T12:23:22.575+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2025-06-16T12:23:31.160+05:30  INFO 20164 --- [order-history-pdf-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
-2025-06-16T12:23:31.165+05:30  INFO 20164 --- [order-history-pdf-service] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T12:23:31.166+05:30  INFO 20164 --- [order-history-pdf-service] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2025-06-16T12:23:31.168+05:30  INFO 20164 --- [order-history-pdf-service] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2025-06-16T12:23:31.270+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Starting OrderHistoryPdfServiceApplication using Java 21.0.2 with PID 20164 (C:\srdev\projects\order-history-pdf\order-history-pdf-service\target\classes started by S6X8SF in C:\srdev\projects\order-history-pdf\order-history-pdf-service)
-2025-06-16T12:23:31.270+05:30 DEBUG 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Running with Spring Boot v3.2.5, Spring v6.1.6
-2025-06-16T12:23:31.271+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2025-06-16T12:23:31.405+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-16T12:23:31.414+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 1 JPA repository interface.
-2025-06-16T12:23:31.484+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-06-16T12:23:31.484+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-16T12:23:31.485+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
-2025-06-16T12:23:31.505+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-16T12:23:31.506+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 234 ms
-2025-06-16T12:23:31.530+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-16T12:23:31.532+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-16T12:23:31.536+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-16T12:23:31.536+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2025-06-16T12:23:31.608+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@20dee31d
-2025-06-16T12:23:31.609+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2025-06-16T12:23:31.622+05:30  WARN 20164 --- [order-history-pdf-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-06-16T12:23:31.667+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-16T12:23:31.667+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T12:23:31.746+05:30  WARN 20164 --- [order-history-pdf-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-16T12:23:31.859+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-06-16T12:23:31.877+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2025-06-16T12:23:31.881+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Started OrderHistoryPdfServiceApplication in 0.634 seconds (process running for 1218.575)
-2025-06-16T12:23:31.883+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2025-06-16T12:23:33.288+05:30  INFO 20164 --- [order-history-pdf-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
-2025-06-16T12:23:33.293+05:30  INFO 20164 --- [order-history-pdf-service] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T12:23:33.294+05:30  INFO 20164 --- [order-history-pdf-service] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2025-06-16T12:23:33.296+05:30  INFO 20164 --- [order-history-pdf-service] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2025-06-16T12:23:33.407+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Starting OrderHistoryPdfServiceApplication using Java 21.0.2 with PID 20164 (C:\srdev\projects\order-history-pdf\order-history-pdf-service\target\classes started by S6X8SF in C:\srdev\projects\order-history-pdf\order-history-pdf-service)
-2025-06-16T12:23:33.408+05:30 DEBUG 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Running with Spring Boot v3.2.5, Spring v6.1.6
-2025-06-16T12:23:33.409+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2025-06-16T12:23:33.536+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-16T12:23:33.542+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interface.
-2025-06-16T12:23:33.595+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-06-16T12:23:33.596+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-16T12:23:33.596+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
-2025-06-16T12:23:33.613+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-16T12:23:33.614+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 203 ms
-2025-06-16T12:23:33.633+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-16T12:23:33.636+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-16T12:23:33.638+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-16T12:23:33.639+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
-2025-06-16T12:23:33.694+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@160963f8
-2025-06-16T12:23:33.694+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
-2025-06-16T12:23:33.705+05:30  WARN 20164 --- [order-history-pdf-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-06-16T12:23:33.729+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-16T12:23:33.730+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T12:23:33.771+05:30  WARN 20164 --- [order-history-pdf-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-16T12:23:33.826+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-06-16T12:23:33.834+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2025-06-16T12:23:33.836+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Started OrderHistoryPdfServiceApplication in 0.457 seconds (process running for 1220.53)
-2025-06-16T12:23:33.837+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2025-06-16T12:25:16.266+05:30  INFO 20164 --- [order-history-pdf-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
-2025-06-16T12:25:16.273+05:30  INFO 20164 --- [order-history-pdf-service] [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T12:25:16.273+05:30  INFO 20164 --- [order-history-pdf-service] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
-2025-06-16T12:25:16.276+05:30  INFO 20164 --- [order-history-pdf-service] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
-2025-06-16T12:25:16.382+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Starting OrderHistoryPdfServiceApplication using Java 21.0.2 with PID 20164 (C:\srdev\projects\order-history-pdf\order-history-pdf-service\target\classes started by S6X8SF in C:\srdev\projects\order-history-pdf\order-history-pdf-service)
-2025-06-16T12:25:16.382+05:30 DEBUG 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Running with Spring Boot v3.2.5, Spring v6.1.6
-2025-06-16T12:25:16.382+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2025-06-16T12:25:16.520+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-16T12:25:16.527+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 1 JPA repository interface.
-2025-06-16T12:25:16.586+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-06-16T12:25:16.587+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-16T12:25:16.587+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
-2025-06-16T12:25:16.605+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-16T12:25:16.605+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 221 ms
-2025-06-16T12:25:16.630+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-16T12:25:16.633+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-16T12:25:16.636+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-16T12:25:16.636+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
-2025-06-16T12:25:16.707+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@23b9ee61
-2025-06-16T12:25:16.707+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
-2025-06-16T12:25:16.721+05:30  WARN 20164 --- [order-history-pdf-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-06-16T12:25:16.752+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-16T12:25:16.752+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T12:25:16.801+05:30  WARN 20164 --- [order-history-pdf-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-16T12:25:16.875+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-06-16T12:25:16.885+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2025-06-16T12:25:16.889+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Started OrderHistoryPdfServiceApplication in 0.531 seconds (process running for 1323.584)
-2025-06-16T12:25:16.890+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2025-06-16T12:25:18.296+05:30  INFO 20164 --- [order-history-pdf-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
-2025-06-16T12:25:18.301+05:30  INFO 20164 --- [order-history-pdf-service] [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T12:25:18.301+05:30  INFO 20164 --- [order-history-pdf-service] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
-2025-06-16T12:25:18.303+05:30  INFO 20164 --- [order-history-pdf-service] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
-2025-06-16T12:25:18.396+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Starting OrderHistoryPdfServiceApplication using Java 21.0.2 with PID 20164 (C:\srdev\projects\order-history-pdf\order-history-pdf-service\target\classes started by S6X8SF in C:\srdev\projects\order-history-pdf\order-history-pdf-service)
-2025-06-16T12:25:18.396+05:30 DEBUG 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Running with Spring Boot v3.2.5, Spring v6.1.6
-2025-06-16T12:25:18.397+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2025-06-16T12:25:18.507+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-16T12:25:18.513+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interface.
-2025-06-16T12:25:18.564+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-06-16T12:25:18.564+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-16T12:25:18.564+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
-2025-06-16T12:25:18.582+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-16T12:25:18.582+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 184 ms
-2025-06-16T12:25:18.604+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-16T12:25:18.605+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-16T12:25:18.608+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-16T12:25:18.609+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
-2025-06-16T12:25:18.664+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection org.postgresql.jdbc.PgConnection@f0f46b8
-2025-06-16T12:25:18.664+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
-2025-06-16T12:25:18.675+05:30  WARN 20164 --- [order-history-pdf-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-06-16T12:25:18.701+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-16T12:25:18.701+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T12:25:18.742+05:30  WARN 20164 --- [order-history-pdf-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-16T12:25:18.802+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-06-16T12:25:18.811+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2025-06-16T12:25:18.813+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Started OrderHistoryPdfServiceApplication in 0.441 seconds (process running for 1325.507)
-2025-06-16T12:25:18.814+05:30  INFO 20164 --- [order-history-pdf-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2025-06-16T12:32:28.049+05:30  INFO 22176 --- [order-history-pdf-service] [main] o.OrderHistoryPdfServiceApplicationTests : Starting OrderHistoryPdfServiceApplicationTests using Java 21.0.2 with PID 22176 (started by S6X8SF in C:\srdev\projects\order-history-pdf\order-history-pdf-service)
-2025-06-16T12:32:28.051+05:30 DEBUG 22176 --- [order-history-pdf-service] [main] o.OrderHistoryPdfServiceApplicationTests : Running with Spring Boot v3.2.5, Spring v6.1.6
-2025-06-16T12:32:28.052+05:30  INFO 22176 --- [order-history-pdf-service] [main] o.OrderHistoryPdfServiceApplicationTests : No active profile set, falling back to 1 default profile: "default"
-2025-06-16T12:32:28.839+05:30  INFO 22176 --- [order-history-pdf-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-16T12:32:28.906+05:30  INFO 22176 --- [order-history-pdf-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interface.
-2025-06-16T12:32:29.394+05:30  INFO 22176 --- [order-history-pdf-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-16T12:32:29.464+05:30  INFO 22176 --- [order-history-pdf-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2025-06-16T12:32:29.504+05:30  INFO 22176 --- [order-history-pdf-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-16T12:32:29.738+05:30  INFO 22176 --- [order-history-pdf-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-16T12:32:29.786+05:30  INFO 22176 --- [order-history-pdf-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-16T12:32:30.047+05:30  INFO 22176 --- [order-history-pdf-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5fd8dd66
-2025-06-16T12:32:30.049+05:30  INFO 22176 --- [order-history-pdf-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-16T12:32:30.094+05:30  WARN 22176 --- [order-history-pdf-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-06-16T12:32:31.047+05:30  INFO 22176 --- [order-history-pdf-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-16T12:32:31.049+05:30  INFO 22176 --- [order-history-pdf-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T12:32:31.571+05:30  WARN 22176 --- [order-history-pdf-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-16T12:32:32.174+05:30  INFO 22176 --- [order-history-pdf-service] [main] o.OrderHistoryPdfServiceApplicationTests : Started OrderHistoryPdfServiceApplicationTests in 4.465 seconds (process running for 5.578)
-2025-06-16T12:32:32.845+05:30  INFO 22176 --- [order-history-pdf-service] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.services.orderhistorypdfservice.controller.OrderReportControllerTest]: OrderReportControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-06-16T12:32:32.872+05:30  INFO 22176 --- [order-history-pdf-service] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.services.orderhistorypdfservice.OrderHistoryPdfServiceApplication for test class org.services.orderhistorypdfservice.controller.OrderReportControllerTest
-2025-06-16T12:32:32.876+05:30  INFO 22176 --- [order-history-pdf-service] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
-2025-06-16T12:32:32.903+05:30  INFO 22176 --- [order-history-pdf-service] [main] o.s.o.c.OrderReportControllerTest        : Starting OrderReportControllerTest using Java 21.0.2 with PID 22176 (started by S6X8SF in C:\srdev\projects\order-history-pdf\order-history-pdf-service)
-2025-06-16T12:32:32.903+05:30 DEBUG 22176 --- [order-history-pdf-service] [main] o.s.o.c.OrderReportControllerTest        : Running with Spring Boot v3.2.5, Spring v6.1.6
-2025-06-16T12:32:32.904+05:30  INFO 22176 --- [order-history-pdf-service] [main] o.s.o.c.OrderReportControllerTest        : No active profile set, falling back to 1 default profile: "default"
-2025-06-16T12:32:33.201+05:30  INFO 22176 --- [order-history-pdf-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-06-16T12:32:33.201+05:30  INFO 22176 --- [order-history-pdf-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-06-16T12:32:33.202+05:30  INFO 22176 --- [order-history-pdf-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2025-06-16T12:32:33.210+05:30  INFO 22176 --- [order-history-pdf-service] [main] o.s.o.c.OrderReportControllerTest        : Started OrderReportControllerTest in 0.334 seconds (process running for 6.613)
-2025-06-16T12:32:33.414+05:30  WARN 22176 --- [order-history-pdf-service] [main] o.s.o.exception.GlobalExceptionHandler   : Validation failed: must not be blank
-2025-06-16T12:32:33.473+05:30  INFO 22176 --- [order-history-pdf-service] [main] o.s.o.controller.OrderReportController   : Received report generation request for customerId=CUST001, from=2023-01-01, to=2023-12-31
-2025-06-16T12:32:33.486+05:30  WARN 22176 --- [order-history-pdf-service] [main] o.s.o.exception.GlobalExceptionHandler   : Resource not found: No orders found
-2025-06-16T12:32:33.490+05:30 ERROR 22176 --- [order-history-pdf-service] [main] o.s.o.exception.GlobalExceptionHandler   : Internal server error: 
-
-java.lang.Exception: Something went wrong
-	at org.services.orderhistorypdfservice.exception.GlobalExceptionHandlerTest.handleGenericException_returnsInternalError(GlobalExceptionHandlerTest.java:32) ~[test-classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728) ~[junit-platform-commons-1.10.2.jar:1.10.2]
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57) ~[junit5-rt.jar:na]
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
-	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231) ~[junit-rt.jar:na]
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55) ~[junit-rt.jar:na]
-
-2025-06-16T12:32:33.716+05:30  INFO 22176 --- [order-history-pdf-service] [main] o.s.o.service.impl.OrderServiceImpl      : Fetching orders for customerId=CUST002, from=2023-01-01, to=2023-12-31
-2025-06-16T12:32:33.748+05:30  INFO 22176 --- [order-history-pdf-service] [main] o.s.o.service.impl.OrderServiceImpl      : Fetching orders for customerId=CUST001, from=2023-01-01, to=2023-12-31
-2025-06-16T12:32:33.751+05:30  INFO 22176 --- [order-history-pdf-service] [main] o.s.o.service.impl.OrderServiceImpl      : Found 1 orders. Generating PDF report...
-2025-06-16T12:32:33.766+05:30  INFO 22176 --- [order-history-pdf-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T12:32:33.771+05:30  INFO 22176 --- [order-history-pdf-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-06-16T12:32:33.775+05:30  INFO 22176 --- [order-history-pdf-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-06-16T12:40:14.293+05:30  INFO 32000 --- [order-history-pdf-service] [main] o.OrderHistoryPdfServiceApplicationTests : Starting OrderHistoryPdfServiceApplicationTests using Java 21.0.2 with PID 32000 (started by S6X8SF in C:\srdev\projects\order-history-pdf\order-history-pdf-service)
-2025-06-16T12:40:14.294+05:30 DEBUG 32000 --- [order-history-pdf-service] [main] o.OrderHistoryPdfServiceApplicationTests : Running with Spring Boot v3.2.5, Spring v6.1.6
-2025-06-16T12:40:14.295+05:30  INFO 32000 --- [order-history-pdf-service] [main] o.OrderHistoryPdfServiceApplicationTests : No active profile set, falling back to 1 default profile: "default"
-2025-06-16T12:40:14.939+05:30  INFO 32000 --- [order-history-pdf-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-16T12:40:14.994+05:30  INFO 32000 --- [order-history-pdf-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interface.
-2025-06-16T12:40:15.469+05:30  INFO 32000 --- [order-history-pdf-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-16T12:40:15.539+05:30  INFO 32000 --- [order-history-pdf-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2025-06-16T12:40:15.599+05:30  INFO 32000 --- [order-history-pdf-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-16T12:40:15.899+05:30  INFO 32000 --- [order-history-pdf-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-16T12:40:15.934+05:30  INFO 32000 --- [order-history-pdf-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-16T12:40:16.145+05:30  INFO 32000 --- [order-history-pdf-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4bf4680c
-2025-06-16T12:40:16.148+05:30  INFO 32000 --- [order-history-pdf-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-16T12:40:16.186+05:30  WARN 32000 --- [order-history-pdf-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-06-16T12:40:17.064+05:30  INFO 32000 --- [order-history-pdf-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-16T12:40:17.067+05:30  INFO 32000 --- [order-history-pdf-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T12:40:17.568+05:30  WARN 32000 --- [order-history-pdf-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-16T12:40:18.152+05:30  INFO 32000 --- [order-history-pdf-service] [main] o.OrderHistoryPdfServiceApplicationTests : Started OrderHistoryPdfServiceApplicationTests in 4.226 seconds (process running for 5.472)
-2025-06-16T12:40:18.832+05:30  INFO 32000 --- [order-history-pdf-service] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.services.orderhistorypdfservice.controller.OrderReportControllerTest]: OrderReportControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-06-16T12:40:18.877+05:30  INFO 32000 --- [order-history-pdf-service] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.services.orderhistorypdfservice.OrderHistoryPdfServiceApplication for test class org.services.orderhistorypdfservice.controller.OrderReportControllerTest
-2025-06-16T12:40:18.882+05:30  INFO 32000 --- [order-history-pdf-service] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
-2025-06-16T12:40:18.909+05:30  INFO 32000 --- [order-history-pdf-service] [main] o.s.o.c.OrderReportControllerTest        : Starting OrderReportControllerTest using Java 21.0.2 with PID 32000 (started by S6X8SF in C:\srdev\projects\order-history-pdf\order-history-pdf-service)
-2025-06-16T12:40:18.909+05:30 DEBUG 32000 --- [order-history-pdf-service] [main] o.s.o.c.OrderReportControllerTest        : Running with Spring Boot v3.2.5, Spring v6.1.6
-2025-06-16T12:40:18.909+05:30  INFO 32000 --- [order-history-pdf-service] [main] o.s.o.c.OrderReportControllerTest        : No active profile set, falling back to 1 default profile: "default"
-2025-06-16T12:40:19.221+05:30  INFO 32000 --- [order-history-pdf-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-06-16T12:40:19.221+05:30  INFO 32000 --- [order-history-pdf-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-06-16T12:40:19.222+05:30  INFO 32000 --- [order-history-pdf-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2025-06-16T12:40:19.229+05:30  INFO 32000 --- [order-history-pdf-service] [main] o.s.o.c.OrderReportControllerTest        : Started OrderReportControllerTest in 0.347 seconds (process running for 6.549)
-2025-06-16T12:40:19.424+05:30  WARN 32000 --- [order-history-pdf-service] [main] o.s.o.exception.GlobalExceptionHandler   : Validation failed: must not be blank
-2025-06-16T12:40:19.484+05:30  INFO 32000 --- [order-history-pdf-service] [main] o.s.o.controller.OrderReportController   : Received report generation request for customerId=CUST001, from=2023-01-01, to=2023-12-31
-2025-06-16T12:40:19.497+05:30  WARN 32000 --- [order-history-pdf-service] [main] o.s.o.exception.GlobalExceptionHandler   : Resource not found: No orders found
-2025-06-16T12:40:19.503+05:30 ERROR 32000 --- [order-history-pdf-service] [main] o.s.o.exception.GlobalExceptionHandler   : Internal server error: 
-
-java.lang.Exception: Something went wrong
-	at org.services.orderhistorypdfservice.exception.GlobalExceptionHandlerTest.handleGenericException_returnsInternalError(GlobalExceptionHandlerTest.java:32) ~[test-classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728) ~[junit-platform-commons-1.10.2.jar:1.10.2]
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
-	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57) ~[junit5-rt.jar:na]
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
-	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231) ~[junit-rt.jar:na]
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55) ~[junit-rt.jar:na]
-
-2025-06-16T12:40:19.754+05:30  INFO 32000 --- [order-history-pdf-service] [main] o.s.o.service.impl.OrderServiceImpl      : Fetching orders for customerId=CUST002, from=2023-01-01, to=2023-12-31
-2025-06-16T12:40:19.788+05:30  INFO 32000 --- [order-history-pdf-service] [main] o.s.o.service.impl.OrderServiceImpl      : Fetching orders for customerId=CUST001, from=2023-01-01, to=2023-12-31
-2025-06-16T12:40:19.790+05:30  INFO 32000 --- [order-history-pdf-service] [main] o.s.o.service.impl.OrderServiceImpl      : Found 1 orders. Generating PDF report...
-2025-06-16T12:40:19.805+05:30  INFO 32000 --- [order-history-pdf-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T12:40:19.808+05:30  INFO 32000 --- [order-history-pdf-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-06-16T12:40:19.813+05:30  INFO 32000 --- [order-history-pdf-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-06-16T12:41:47.090+05:30  INFO 20164 --- [order-history-pdf-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-16T12:41:47.091+05:30  INFO 20164 --- [order-history-pdf-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
-2025-06-16T12:41:47.093+05:30  INFO 20164 --- [order-history-pdf-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2025-06-17T10:21:42.609+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Starting OrderHistoryPdfServiceApplication using Java 21.0.2 with PID 12884 (C:\srdev\projects\order-history-pdf\order-history-pdf-service\target\classes started by S6X8SF in C:\srdev\projects\order-history-pdf\order-history-pdf-service)
+2025-06-17T10:21:42.617+05:30 DEBUG 12884 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Running with Spring Boot v3.2.5, Spring v6.1.6
+2025-06-17T10:21:42.619+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-06-17T10:21:42.665+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-17T10:21:42.665+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-17T10:21:43.317+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-17T10:21:43.371+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interface.
+2025-06-17T10:21:43.828+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-17T10:21:43.839+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-17T10:21:43.840+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-06-17T10:21:43.883+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-17T10:21:43.884+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1219 ms
+2025-06-17T10:21:44.023+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-17T10:21:44.118+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-06-17T10:21:44.162+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-17T10:21:44.430+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-17T10:21:44.458+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-17T10:21:44.642+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@78b66f28
+2025-06-17T10:21:44.643+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-17T10:21:44.707+05:30  WARN 12884 --- [order-history-pdf-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-17T10:21:45.728+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-17T10:21:45.731+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-17T10:21:46.093+05:30  WARN 12884 --- [order-history-pdf-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-17T10:21:46.381+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-17T10:21:46.410+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-06-17T10:21:46.417+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Started OrderHistoryPdfServiceApplication in 4.2 seconds (process running for 5.118)
+2025-06-17T10:21:50.149+05:30  INFO 12884 --- [order-history-pdf-service] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-17T10:21:50.149+05:30  INFO 12884 --- [order-history-pdf-service] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-17T10:21:50.150+05:30  INFO 12884 --- [order-history-pdf-service] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-17T10:21:50.264+05:30  INFO 12884 --- [order-history-pdf-service] [http-nio-8080-exec-2] o.s.o.controller.OrderReportController   : Received report generation request for customerId=CUST001, from=2023-01-01, to=2023-05-31
+2025-06-17T10:21:50.264+05:30  INFO 12884 --- [order-history-pdf-service] [http-nio-8080-exec-2] o.s.o.service.impl.OrderServiceImpl      : Fetching orders for customerId=CUST001, from=2023-01-01, to=2023-05-31
+2025-06-17T10:21:50.408+05:30  INFO 12884 --- [order-history-pdf-service] [http-nio-8080-exec-2] o.s.o.service.impl.OrderServiceImpl      : Found 5 orders. Generating PDF report...
+2025-06-17T10:21:50.616+05:30  INFO 12884 --- [order-history-pdf-service] [http-nio-8080-exec-2] o.s.o.util.PdfGeneratorUtil              : PDF report generated successfully.
+2025-06-17T10:22:18.565+05:30  INFO 12884 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.o.controller.OrderReportController   : Received report generation request for customerId=CUST001, from=2023-05-01, to=2023-01-31
+2025-06-17T10:22:18.565+05:30  INFO 12884 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.o.service.impl.OrderServiceImpl      : Fetching orders for customerId=CUST001, from=2023-05-01, to=2023-01-31
+2025-06-17T10:22:18.570+05:30  WARN 12884 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.o.exception.GlobalExceptionHandler   : Resource not found: No orders found for given customer and date range.
+2025-06-17T10:22:18.591+05:30  WARN 12884 --- [order-history-pdf-service] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.services.orderhistorypdfservice.exception.ResourceNotFoundException: No orders found for given customer and date range.]
+2025-06-17T10:25:12.637+05:30  INFO 12884 --- [order-history-pdf-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-06-17T10:25:12.647+05:30  INFO 12884 --- [order-history-pdf-service] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-17T10:25:12.650+05:30  INFO 12884 --- [order-history-pdf-service] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-17T10:25:12.653+05:30  INFO 12884 --- [order-history-pdf-service] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-17T10:25:12.778+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Starting OrderHistoryPdfServiceApplication using Java 21.0.2 with PID 12884 (C:\srdev\projects\order-history-pdf\order-history-pdf-service\target\classes started by S6X8SF in C:\srdev\projects\order-history-pdf\order-history-pdf-service)
+2025-06-17T10:25:12.778+05:30 DEBUG 12884 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Running with Spring Boot v3.2.5, Spring v6.1.6
+2025-06-17T10:25:12.779+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-06-17T10:25:12.939+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-17T10:25:12.949+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interface.
+2025-06-17T10:25:13.032+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-17T10:25:13.032+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-17T10:25:13.032+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-06-17T10:25:13.057+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-17T10:25:13.057+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 276 ms
+2025-06-17T10:25:13.090+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-17T10:25:13.092+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-17T10:25:13.097+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-17T10:25:13.099+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-06-17T10:25:13.162+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@7f8b3e0
+2025-06-17T10:25:13.163+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-06-17T10:25:13.176+05:30  WARN 12884 --- [order-history-pdf-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-17T10:25:13.211+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-17T10:25:13.211+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-17T10:25:13.280+05:30  WARN 12884 --- [order-history-pdf-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-17T10:25:13.389+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-17T10:25:13.400+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-06-17T10:25:13.403+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Started OrderHistoryPdfServiceApplication in 0.651 seconds (process running for 212.127)
+2025-06-17T10:25:13.406+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-06-17T10:25:14.828+05:30  INFO 12884 --- [order-history-pdf-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-06-17T10:25:14.833+05:30  INFO 12884 --- [order-history-pdf-service] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-17T10:25:14.834+05:30  INFO 12884 --- [order-history-pdf-service] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-06-17T10:25:14.836+05:30  INFO 12884 --- [order-history-pdf-service] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-06-17T10:25:14.934+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Starting OrderHistoryPdfServiceApplication using Java 21.0.2 with PID 12884 (C:\srdev\projects\order-history-pdf\order-history-pdf-service\target\classes started by S6X8SF in C:\srdev\projects\order-history-pdf\order-history-pdf-service)
+2025-06-17T10:25:14.934+05:30 DEBUG 12884 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Running with Spring Boot v3.2.5, Spring v6.1.6
+2025-06-17T10:25:14.934+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-06-17T10:25:15.068+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-17T10:25:15.077+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 1 JPA repository interface.
+2025-06-17T10:25:15.139+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-17T10:25:15.141+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-17T10:25:15.141+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-06-17T10:25:15.159+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-17T10:25:15.159+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 223 ms
+2025-06-17T10:25:15.181+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-17T10:25:15.183+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-17T10:25:15.187+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-17T10:25:15.187+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-06-17T10:25:15.243+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@58ae2911
+2025-06-17T10:25:15.243+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-06-17T10:25:15.256+05:30  WARN 12884 --- [order-history-pdf-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-17T10:25:15.284+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-17T10:25:15.285+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-17T10:25:15.333+05:30  WARN 12884 --- [order-history-pdf-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-17T10:25:15.393+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-17T10:25:15.401+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-06-17T10:25:15.404+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Started OrderHistoryPdfServiceApplication in 0.493 seconds (process running for 214.127)
+2025-06-17T10:25:15.404+05:30  INFO 12884 --- [order-history-pdf-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-06-17T10:26:08.021+05:30  INFO 12884 --- [order-history-pdf-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-17T10:26:08.022+05:30  INFO 12884 --- [order-history-pdf-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-06-17T10:26:08.024+05:30  INFO 12884 --- [order-history-pdf-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-06-17T10:26:11.903+05:30  INFO 37480 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Starting OrderHistoryPdfServiceApplication using Java 21.0.2 with PID 37480 (C:\srdev\projects\order-history-pdf\order-history-pdf-service\target\classes started by S6X8SF in C:\srdev\projects\order-history-pdf\order-history-pdf-service)
+2025-06-17T10:26:11.905+05:30 DEBUG 37480 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Running with Spring Boot v3.2.5, Spring v6.1.6
+2025-06-17T10:26:11.905+05:30  INFO 37480 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-06-17T10:26:11.952+05:30  INFO 37480 --- [order-history-pdf-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-17T10:26:11.952+05:30  INFO 37480 --- [order-history-pdf-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-17T10:26:12.435+05:30  INFO 37480 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-17T10:26:12.478+05:30  INFO 37480 --- [order-history-pdf-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interface.
+2025-06-17T10:26:12.912+05:30  INFO 37480 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-17T10:26:12.921+05:30  INFO 37480 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-17T10:26:12.921+05:30  INFO 37480 --- [order-history-pdf-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-06-17T10:26:12.960+05:30  INFO 37480 --- [order-history-pdf-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-17T10:26:12.961+05:30  INFO 37480 --- [order-history-pdf-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1009 ms
+2025-06-17T10:26:13.076+05:30  INFO 37480 --- [order-history-pdf-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-17T10:26:13.115+05:30  INFO 37480 --- [order-history-pdf-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-06-17T10:26:13.144+05:30  INFO 37480 --- [order-history-pdf-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-17T10:26:13.341+05:30  INFO 37480 --- [order-history-pdf-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-17T10:26:13.362+05:30  INFO 37480 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-17T10:26:13.506+05:30  INFO 37480 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@561a0c14
+2025-06-17T10:26:13.507+05:30  INFO 37480 --- [order-history-pdf-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-17T10:26:13.539+05:30  WARN 37480 --- [order-history-pdf-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-17T10:26:14.225+05:30  INFO 37480 --- [order-history-pdf-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-17T10:26:14.227+05:30  INFO 37480 --- [order-history-pdf-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-17T10:26:14.491+05:30  WARN 37480 --- [order-history-pdf-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-17T10:26:14.747+05:30  INFO 37480 --- [order-history-pdf-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-17T10:26:14.780+05:30  INFO 37480 --- [order-history-pdf-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-06-17T10:26:14.787+05:30  INFO 37480 --- [order-history-pdf-service] [restartedMain] o.s.o.OrderHistoryPdfServiceApplication  : Started OrderHistoryPdfServiceApplication in 3.303 seconds (process running for 3.931)
+2025-06-17T10:26:19.951+05:30  INFO 37480 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-17T10:26:19.951+05:30  INFO 37480 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-17T10:26:19.952+05:30  INFO 37480 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-17T10:26:20.068+05:30  INFO 37480 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.o.controller.OrderReportController   : Received report generation request for customerId=CUST001, from=2023-05-01, to=2023-01-31
+2025-06-17T10:26:20.068+05:30  INFO 37480 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.o.service.impl.OrderServiceImpl      : Fetching orders for customerId=CUST001, from=2023-05-01, to=2023-01-31
+2025-06-17T10:26:20.070+05:30  WARN 37480 --- [order-history-pdf-service] [http-nio-8080-exec-1] o.s.o.exception.GlobalExceptionHandler   : Invalid input: From date cannot be after To date
+2025-06-17T10:26:20.094+05:30  WARN 37480 --- [order-history-pdf-service] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IllegalArgumentException: From date cannot be after To date]
+2025-06-17T10:27:51.826+05:30  INFO 37480 --- [order-history-pdf-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-17T10:27:51.829+05:30  INFO 37480 --- [order-history-pdf-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-17T10:27:51.832+05:30  INFO 37480 --- [order-history-pdf-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
